@@ -81,7 +81,45 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paintMeshes:
   - meshFilter: {fileID: 7792871103331421853}
-    cacheVertices: []
+    cacheVertices:
+    - {x: -3, y: 0, z: -1.5}
+    - {x: 0, y: 1.5999998, z: -1.5}
+    - {x: 3, y: 0, z: -1.5}
+    - {x: -3, y: 0, z: -1.5}
+    - {x: 3, y: 0, z: -1.5}
+    - {x: 3, y: 0, z: 2.5}
+    - {x: -3, y: 0, z: 2.5}
+    - {x: 3.3000002, y: -0.20000029, z: 2.5}
+    - {x: 3.3, y: -0.20000017, z: -1.9999996}
+    - {x: 3.6999996, y: -0.20000017, z: -1.9999996}
+    - {x: 3.6999998, y: -0.20000029, z: 2.5}
+    - {x: 0, y: 1.5, z: -2}
+    - {x: -3.3, y: -0.20000017, z: -1.9999996}
+    - {x: -3.6999996, y: -0.20000017, z: -1.9999996}
+    - {x: 0, y: 1.7999997, z: -2}
+    - {x: 3.3, y: -0.20000017, z: -1.9999996}
+    - {x: 0, y: 1.7999997, z: -2}
+    - {x: 3.6999996, y: -0.20000017, z: -1.9999996}
+    - {x: 3.3, y: -0.20000017, z: -1.9999996}
+    - {x: 3.3000002, y: -0.20000029, z: 2.5}
+    - {x: 0, y: 1.5, z: 2.5}
+    - {x: 0, y: 1.5, z: -2}
+    - {x: -3.6999996, y: -0.20000017, z: -1.9999996}
+    - {x: -3.6999998, y: -0.20000029, z: 2.5}
+    - {x: 0, y: 1.7999997, z: 2.5}
+    - {x: 0, y: 1.7999997, z: -2}
+    - {x: 0, y: 1.7999997, z: -2}
+    - {x: 0, y: 1.7999997, z: 2.5}
+    - {x: 3.6999998, y: -0.20000029, z: 2.5}
+    - {x: 3.6999996, y: -0.20000017, z: -1.9999996}
+    - {x: 0, y: 1.5, z: -2}
+    - {x: 0, y: 1.5, z: 2.5}
+    - {x: -3.3000002, y: -0.20000029, z: 2.5}
+    - {x: -3.3, y: -0.20000017, z: -1.9999996}
+    - {x: -3.3, y: -0.20000017, z: -1.9999996}
+    - {x: -3.3000002, y: -0.20000029, z: 2.5}
+    - {x: -3.6999998, y: -0.20000029, z: 2.5}
+    - {x: -3.6999996, y: -0.20000017, z: -1.9999996}
     sourceMesh: {fileID: -5025859788376977868, guid: 6367c0ac1dfa45949b753df7d0029f5e,
       type: 3}
     vertexColors:
@@ -124,7 +162,45 @@ MonoBehaviour:
     - {r: 0, g: 0, b: 0, a: 0}
     - {r: 0, g: 0, b: 0, a: 0}
   - meshFilter: {fileID: 7912123862887349157}
-    cacheVertices: []
+    cacheVertices:
+    - {x: -3, y: 0, z: -1.5}
+    - {x: 0, y: 1.5999998, z: -1.5}
+    - {x: 3, y: 0, z: -1.5}
+    - {x: -3, y: 0, z: -1.5}
+    - {x: 3, y: 0, z: -1.5}
+    - {x: 3, y: 0, z: 2.5}
+    - {x: -3, y: 0, z: 2.5}
+    - {x: 3.3000002, y: -0.20000029, z: 2.5}
+    - {x: 3.3, y: -0.20000017, z: -1.9999996}
+    - {x: 3.6999996, y: -0.20000017, z: -1.9999996}
+    - {x: 3.6999998, y: -0.20000029, z: 2.5}
+    - {x: 0, y: 1.5, z: -2}
+    - {x: -3.3, y: -0.20000017, z: -1.9999996}
+    - {x: -3.6999996, y: -0.20000017, z: -1.9999996}
+    - {x: 0, y: 1.7999997, z: -2}
+    - {x: 3.3, y: -0.20000017, z: -1.9999996}
+    - {x: 0, y: 1.7999997, z: -2}
+    - {x: 3.6999996, y: -0.20000017, z: -1.9999996}
+    - {x: 3.3, y: -0.20000017, z: -1.9999996}
+    - {x: 3.3000002, y: -0.20000029, z: 2.5}
+    - {x: 0, y: 1.5, z: 2.5}
+    - {x: 0, y: 1.5, z: -2}
+    - {x: -3.6999996, y: -0.20000017, z: -1.9999996}
+    - {x: -3.6999998, y: -0.20000029, z: 2.5}
+    - {x: 0, y: 1.7999997, z: 2.5}
+    - {x: 0, y: 1.7999997, z: -2}
+    - {x: 0, y: 1.7999997, z: -2}
+    - {x: 0, y: 1.7999997, z: 2.5}
+    - {x: 3.6999998, y: -0.20000029, z: 2.5}
+    - {x: 3.6999996, y: -0.20000017, z: -1.9999996}
+    - {x: 0, y: 1.5, z: -2}
+    - {x: 0, y: 1.5, z: 2.5}
+    - {x: -3.3000002, y: -0.20000029, z: 2.5}
+    - {x: -3.3, y: -0.20000017, z: -1.9999996}
+    - {x: -3.3, y: -0.20000017, z: -1.9999996}
+    - {x: -3.3000002, y: -0.20000029, z: 2.5}
+    - {x: -3.6999998, y: -0.20000029, z: 2.5}
+    - {x: -3.6999996, y: -0.20000017, z: -1.9999996}
     sourceMesh: {fileID: -5025859788376977868, guid: 6367c0ac1dfa45949b753df7d0029f5e,
       type: 3}
     vertexColors:
@@ -167,7 +243,11 @@ MonoBehaviour:
     - {r: 0, g: 0, b: 0, a: 0}
     - {r: 0, g: 0, b: 0, a: 0}
   - meshFilter: {fileID: 41386641335799313}
-    cacheVertices: []
+    cacheVertices:
+    - {x: 0.0000009536743, y: 0, z: 0}
+    - {x: 0.0000009536743, y: 0, z: -2}
+    - {x: 0.0000009536743, y: 3, z: -2}
+    - {x: 0.0000009536743, y: 3, z: 0}
     sourceMesh: {fileID: -968343169074139424, guid: 865899c5808fd2f4db07815b95d0874e,
       type: 3}
     vertexColors:
@@ -176,7 +256,11 @@ MonoBehaviour:
     - {r: 0, g: 0, b: 0, a: 0}
     - {r: 0, g: 0, b: 0, a: 0}
   - meshFilter: {fileID: 5152982187807542056}
-    cacheVertices: []
+    cacheVertices:
+    - {x: 0.0000009536743, y: 0, z: 0}
+    - {x: 0.0000009536743, y: 0, z: -4}
+    - {x: 0.0000009536743, y: 3, z: -4}
+    - {x: 0.0000009536743, y: 3, z: 0}
     sourceMesh: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
       type: 3}
     vertexColors:
@@ -185,7 +269,11 @@ MonoBehaviour:
     - {r: 0, g: 0, b: 0, a: 0}
     - {r: 0, g: 0, b: 0, a: 0}
   - meshFilter: {fileID: 1594742578217683576}
-    cacheVertices: []
+    cacheVertices:
+    - {x: 0.0000009536743, y: 0, z: 0}
+    - {x: 0.0000009536743, y: 0, z: -4}
+    - {x: 0.0000009536743, y: 3, z: -4}
+    - {x: 0.0000009536743, y: 3, z: 0}
     sourceMesh: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
       type: 3}
     vertexColors:
@@ -194,7 +282,11 @@ MonoBehaviour:
     - {r: 0, g: 0, b: 0, a: 0}
     - {r: 0, g: 0, b: 0, a: 0}
   - meshFilter: {fileID: 2872298158187385173}
-    cacheVertices: []
+    cacheVertices:
+    - {x: 0.0000009536743, y: 0, z: 0}
+    - {x: 0.0000009536743, y: 0, z: -4}
+    - {x: 0.0000009536743, y: 3, z: -4}
+    - {x: 0.0000009536743, y: 3, z: 0}
     sourceMesh: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
       type: 3}
     vertexColors:
@@ -203,7 +295,11 @@ MonoBehaviour:
     - {r: 0, g: 0, b: 0, a: 0}
     - {r: 0, g: 0, b: 0, a: 0}
   - meshFilter: {fileID: 2435487293538062617}
-    cacheVertices: []
+    cacheVertices:
+    - {x: 0.0000009536743, y: 0, z: 0}
+    - {x: 0.0000009536743, y: 0, z: -4}
+    - {x: 0.0000009536743, y: 3, z: -4}
+    - {x: 0.0000009536743, y: 3, z: 0}
     sourceMesh: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
       type: 3}
     vertexColors:
@@ -212,7 +308,11 @@ MonoBehaviour:
     - {r: 0, g: 0, b: 0, a: 0}
     - {r: 0, g: 0, b: 0, a: 0}
   - meshFilter: {fileID: 6460688811643058009}
-    cacheVertices: []
+    cacheVertices:
+    - {x: 0.0000009536743, y: 0, z: 0}
+    - {x: 0.0000009536743, y: 0, z: -4}
+    - {x: 0.0000009536743, y: 3, z: -4}
+    - {x: 0.0000009536743, y: 3, z: 0}
     sourceMesh: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
       type: 3}
     vertexColors:
@@ -221,7 +321,11 @@ MonoBehaviour:
     - {r: 0, g: 0, b: 0, a: 0}
     - {r: 0, g: 0, b: 0, a: 0}
   - meshFilter: {fileID: 5749570181091697696}
-    cacheVertices: []
+    cacheVertices:
+    - {x: 0.0000009536743, y: 0, z: 0}
+    - {x: 0.0000009536743, y: 0, z: -2}
+    - {x: 0.0000009536743, y: 3, z: -2}
+    - {x: 0.0000009536743, y: 3, z: 0}
     sourceMesh: {fileID: -968343169074139424, guid: 865899c5808fd2f4db07815b95d0874e,
       type: 3}
     vertexColors:
@@ -230,7 +334,11 @@ MonoBehaviour:
     - {r: 0, g: 0, b: 0, a: 0}
     - {r: 0, g: 0, b: 0, a: 0}
   - meshFilter: {fileID: 6315159767355297211}
-    cacheVertices: []
+    cacheVertices:
+    - {x: 0.0000009536743, y: 0, z: 0}
+    - {x: 0.0000009536743, y: 0, z: -4}
+    - {x: 0.0000009536743, y: 3, z: -4}
+    - {x: 0.0000009536743, y: 3, z: 0}
     sourceMesh: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
       type: 3}
     vertexColors:
@@ -288,8 +396,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -968343169074139424, guid: 865899c5808fd2f4db07815b95d0874e,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2786742878094427255, guid: 1c34fdf84fdad2a4d9b5b253c48cd707,
         type: 3}
       propertyPath: m_Name
@@ -445,8 +552,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
-        type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45bf5465d2e5b34abace6e411599780, type: 3}
 --- !u!33 &5152982187807542056 stripped
@@ -537,8 +643,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
-        type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45bf5465d2e5b34abace6e411599780, type: 3}
 --- !u!33 &6315159767355297211 stripped
@@ -564,8 +669,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -5025859788376977868, guid: 6367c0ac1dfa45949b753df7d0029f5e,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7084400576985210774, guid: 628c56d3375b1144aa396e845c8d42ea,
         type: 3}
       propertyPath: m_RootOrder
@@ -656,8 +760,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -5025859788376977868, guid: 6367c0ac1dfa45949b753df7d0029f5e,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 7084400576985210774, guid: 628c56d3375b1144aa396e845c8d42ea,
         type: 3}
       propertyPath: m_RootOrder
@@ -813,8 +916,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
-        type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45bf5465d2e5b34abace6e411599780, type: 3}
 --- !u!33 &6460688811643058009 stripped
@@ -905,8 +1007,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
-        type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45bf5465d2e5b34abace6e411599780, type: 3}
 --- !u!4 &1185476264342560496 stripped
@@ -997,8 +1098,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
-        type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45bf5465d2e5b34abace6e411599780, type: 3}
 --- !u!4 &1613218163764190908 stripped
@@ -1024,8 +1124,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -968343169074139424, guid: 865899c5808fd2f4db07815b95d0874e,
-        type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 2786742878094427255, guid: 1c34fdf84fdad2a4d9b5b253c48cd707,
         type: 3}
       propertyPath: m_Name
@@ -1181,8 +1280,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
-        type: 3}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45bf5465d2e5b34abace6e411599780, type: 3}
 --- !u!33 &1594742578217683576 stripped
