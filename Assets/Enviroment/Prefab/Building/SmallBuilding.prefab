@@ -80,16 +80,164 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paintMeshes:
-  - {fileID: 7792871103331421853}
-  - {fileID: 7912123862887349157}
-  - {fileID: 41386641335799313}
-  - {fileID: 5152982187807542056}
-  - {fileID: 1594742578217683576}
-  - {fileID: 2872298158187385173}
-  - {fileID: 2435487293538062617}
-  - {fileID: 6460688811643058009}
-  - {fileID: 5749570181091697696}
-  - {fileID: 6315159767355297211}
+  - meshFilter: {fileID: 7792871103331421853}
+    cacheVertices: []
+    sourceMesh: {fileID: -5025859788376977868, guid: 6367c0ac1dfa45949b753df7d0029f5e,
+      type: 3}
+    vertexColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+  - meshFilter: {fileID: 7912123862887349157}
+    cacheVertices: []
+    sourceMesh: {fileID: -5025859788376977868, guid: 6367c0ac1dfa45949b753df7d0029f5e,
+      type: 3}
+    vertexColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+  - meshFilter: {fileID: 41386641335799313}
+    cacheVertices: []
+    sourceMesh: {fileID: -968343169074139424, guid: 865899c5808fd2f4db07815b95d0874e,
+      type: 3}
+    vertexColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+  - meshFilter: {fileID: 5152982187807542056}
+    cacheVertices: []
+    sourceMesh: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
+      type: 3}
+    vertexColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+  - meshFilter: {fileID: 1594742578217683576}
+    cacheVertices: []
+    sourceMesh: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
+      type: 3}
+    vertexColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+  - meshFilter: {fileID: 2872298158187385173}
+    cacheVertices: []
+    sourceMesh: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
+      type: 3}
+    vertexColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+  - meshFilter: {fileID: 2435487293538062617}
+    cacheVertices: []
+    sourceMesh: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
+      type: 3}
+    vertexColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+  - meshFilter: {fileID: 6460688811643058009}
+    cacheVertices: []
+    sourceMesh: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
+      type: 3}
+    vertexColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+  - meshFilter: {fileID: 5749570181091697696}
+    cacheVertices: []
+    sourceMesh: {fileID: -968343169074139424, guid: 865899c5808fd2f4db07815b95d0874e,
+      type: 3}
+    vertexColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+  - meshFilter: {fileID: 6315159767355297211}
+    cacheVertices: []
+    sourceMesh: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
+      type: 3}
+    vertexColors:
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
+    - {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &6275350211918795326
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +288,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -968343169074139424, guid: 865899c5808fd2f4db07815b95d0874e,
+        type: 3}
     - target: {fileID: 2786742878094427255, guid: 1c34fdf84fdad2a4d9b5b253c48cd707,
         type: 3}
       propertyPath: m_Name
@@ -296,7 +445,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45bf5465d2e5b34abace6e411599780, type: 3}
 --- !u!33 &5152982187807542056 stripped
@@ -387,7 +537,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45bf5465d2e5b34abace6e411599780, type: 3}
 --- !u!33 &6315159767355297211 stripped
@@ -662,7 +813,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45bf5465d2e5b34abace6e411599780, type: 3}
 --- !u!33 &6460688811643058009 stripped
@@ -753,7 +905,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45bf5465d2e5b34abace6e411599780, type: 3}
 --- !u!4 &1185476264342560496 stripped
@@ -844,7 +997,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45bf5465d2e5b34abace6e411599780, type: 3}
 --- !u!4 &1613218163764190908 stripped
@@ -870,7 +1024,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: -968343169074139424, guid: 865899c5808fd2f4db07815b95d0874e,
+        type: 3}
     - target: {fileID: 2786742878094427255, guid: 1c34fdf84fdad2a4d9b5b253c48cd707,
         type: 3}
       propertyPath: m_Name
@@ -1026,7 +1181,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 7706785305447086052, guid: 5ad8f22060064234f90ba6e2569e4e5b,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e45bf5465d2e5b34abace6e411599780, type: 3}
 --- !u!33 &1594742578217683576 stripped

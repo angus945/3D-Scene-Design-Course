@@ -216,7 +216,6 @@ public class VertexPaintObjectEditor : Editor
     {
         if (vertexBrush.point == Vector3.zero) return;
 
-        //if (Event.current.button == 0)
         Event e = Event.current;
 
         EventType type = e.type;
