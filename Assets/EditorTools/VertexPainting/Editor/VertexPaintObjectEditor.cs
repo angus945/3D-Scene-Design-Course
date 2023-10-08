@@ -52,6 +52,10 @@ public class VertexPaintObjectEditor : Editor
         {
             LoadSouceMesh();
         }
+        if (GUILayout.Button("Clear Color"))
+        {
+            ClearColor();
+        }
     }
     void DrawPaintingTool()
     {
@@ -63,26 +67,6 @@ public class VertexPaintObjectEditor : Editor
 
         string[] toolbarLabels = { "Layer 0", "Layer 1", "Layer 2", "Layer 3" };
         vertexBrush.paintLayer = GUILayout.Toolbar(vertexBrush.paintLayer, toolbarLabels);
-        //EditorGUILayout.ColorField("Color: ", layerColors[vertexBrush.paintLayer]);
-        //switch (vertexBrush.colorIndex)
-        //{
-        //    case 0:
-        //        GUI.contentColor = Color.red;
-        //        GUILayout.Label("Content for Tab 1");
-        //        break;
-        //    case 1:
-        //        GUI.contentColor = Color.green;
-        //        GUILayout.Label("Content for Tab 2");
-        //        break;
-        //    case 2:
-        //        GUI.contentColor = Color.blue;
-        //        GUILayout.Label("Content for Tab 3");
-        //        break;
-        //    default:
-        //        break;
-        //}
-        //GUILayout.Toolbar();
-        //EditorGUILayout.tab
     }
 
     //Painting Mesh Data
@@ -131,6 +115,18 @@ public class VertexPaintObjectEditor : Editor
             EditorUtility.ClearDirty(paintDatas[i].meshFilter);
         }
     }
+    void ClearColor()
+    {
+        for (int i = 0; i < paintDatas.Count; i++)
+        {
+            VertexPaintData paintData = paintDatas[i];
+
+            paintData.vertexColors = new Color[paintData.vertexColors.Length];
+            paintData.meshFilter.sharedMesh.colors = paintData.vertexColors;
+
+            EditorUtility.ClearDirty(paintDatas[i].meshFilter);
+        }
+    }
 
     void SaveSorceMesh()
     {
@@ -158,7 +154,7 @@ public class VertexPaintObjectEditor : Editor
     VertexPaintBrush vertexBrush = new VertexPaintBrush(3, 1, 1, 1);
     readonly Vector3[] layerColors = new Vector3[]
     {
-        new Vector3(0,0,0),
+        new Vector3(-1,-1,-1),
         new Vector3(1,0,0),
         new Vector3(0,1,0),
         new Vector3(0,0,1),
@@ -274,20 +270,34 @@ public class VertexPaintObjectEditor : Editor
             float distance = Vector3.Distance(worldVertex, brush.point);
 
             if (distance > brush.size + brush.fade) continue;
-            
+
             Vector3 brushColor = layerColors[brush.paintLayer];
+            Vector3 sourceColor = new Vector3(data.vertexColors[i].r, data.vertexColors[i].g, data.vertexColors[i].b);
+            Vector3 maskedSouceColor = new(brushColor.x * sourceColor.x, brushColor.y * sourceColor.y, brushColor.z * sourceColor.z);
+            Vector3 inverseBrushColor = Vector3.one - brushColor;
+            Vector3 inverseMaskedSourceColor = new Vector3(inverseBrushColor.x * sourceColor.x, inverseBrushColor.y * sourceColor.y, inverseBrushColor.z * sourceColor.z);
+
             distance = distance - brush.size;
             distance = distance / brush.fade;
             distance = Mathf.Clamp01(distance);
-            distance = 1 - distance;
 
-            brushColor *= distance;
-            Debug.LogError(distance);
+            float intensity = (1 - distance) * brush.intensity;
+            float eraseIntensity = (distance);
 
-            Color sourceColor = data.vertexColors[i];
+            Vector3 overlayColor, baseColor;
+            if (brush.erase)
+            {
+                overlayColor = Vector3.Min(maskedSouceColor, brushColor * eraseIntensity);
+                baseColor = inverseMaskedSourceColor;
+            }
+            else
+            {
+                overlayColor = Vector3.Max(maskedSouceColor, brushColor * intensity);
+                baseColor = Vector3.Min(inverseMaskedSourceColor, inverseBrushColor * eraseIntensity);
+            }
 
-            data.vertexColors[i] = new Color(brushColor.x, brushColor.y, brushColor.z);
-            
+            Vector3 resultColor = baseColor + overlayColor;
+            data.vertexColors[i] = new Color(resultColor.x, resultColor.y, resultColor.z);
         }
 
         data.meshFilter.sharedMesh.colors = data.vertexColors;
