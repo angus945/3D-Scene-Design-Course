@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
@@ -9,7 +10,7 @@ public class VertexPaintObjectEditor : Editor
     List<VertexPaintData> paintDatas { get => paintObject.paintMeshes; }
     bool dataExist { get => paintObject.paintMeshes != null || paintObject.paintMeshes.Count != 0; }
 
-    Material vertexColorMaterial;
+    bool isPaintingMode;
 
     //Default
     void OnEnable()
@@ -31,21 +32,26 @@ public class VertexPaintObjectEditor : Editor
 
         SceneView.duringSceneGui -= DuringSceneGUI;
 
-        LoadSouceMesh();
+        //LoadSouceMesh();
     }
 
     //InspectorGUI
     public override void OnInspectorGUI()
     {
-        base.OnInspectorGUI();
+        //base.OnInspectorGUI();
 
-        DrawButtons();
+        DrawMeshOption();
         DrawPaintingTool();
+        //DrawMaterialProperity();
+        DrawBrushProperity();
 
-        overlayVertexColor = EditorGUILayout.Toggle("overlay vertex color", overlayVertexColor);
+        DrawDebugOption();
     }
-    void DrawButtons()
+
+    void DrawMeshOption()
     {
+        GUILayout.Label("Paint Mesh", EditorStyles.boldLabel);
+
         if (GUILayout.Button("Reload MeshFilter"))
         {
             ReloadMeshFilters();
@@ -67,14 +73,49 @@ public class VertexPaintObjectEditor : Editor
     }
     void DrawPaintingTool()
     {
-        isPaintingMode = EditorGUILayout.Toggle("Painting Mode", isPaintingMode);
+        EditorGUILayout.Space();
+        GUILayout.Label("Vertex Painting", EditorStyles.boldLabel);
 
+        string modeButton = isPaintingMode ? "Disable Painting" : "Enable Painting";
+        GUI.color = isPaintingMode ? Color.green : Color.white;
+        if (GUILayout.Button(modeButton))
+        {
+            isPaintingMode = !isPaintingMode;
+        }
+        GUI.color = Color.white;
+
+        string[] toolbarLabels = { "Layer 0", "Layer 1", "Layer 2" };
+        Vector3[] channels = { Vector3.one, new Vector3(1, 0, 0), new Vector3(0, 1, 0) };
+        vertexBrush.paintLayer = GUILayout.Toolbar(vertexBrush.paintLayer, toolbarLabels);
+        vertexColorMaterial.SetVector("_Display", channels[vertexBrush.paintLayer]);
+
+    }
+    void DrawMaterialProperity()
+    {
+
+    }
+    void DrawBrushProperity()
+    {
+        if (!isPaintingMode) return;
+
+        EditorGUILayout.Space();
+        GUILayout.Label("Brush Properity", EditorStyles.boldLabel);
         vertexBrush.size = EditorGUILayout.FloatField("brush size", vertexBrush.size);
         vertexBrush.fade = EditorGUILayout.FloatField("brush fade", vertexBrush.fade);
         vertexBrush.intensity = EditorGUILayout.Slider("brush intensity", vertexBrush.intensity, 0, 1);
+    }
+    void DrawDebugOption()
+    {
+        EditorGUILayout.Space();
+        GUILayout.Label("Debug Option", EditorStyles.boldLabel);
 
-        string[] toolbarLabels = { "Layer 0", "Layer 1", "Layer 2" };
-        vertexBrush.paintLayer = GUILayout.Toolbar(vertexBrush.paintLayer, toolbarLabels);
+        string displayMode = "Display: " + (overlayVertexColor ? "Vertex Color" : "Material");
+        GUI.color = overlayVertexColor ? Color.yellow : Color.white;
+        if(GUILayout.Button(displayMode))
+        {
+            overlayVertexColor = !overlayVertexColor;
+        }
+        GUI.color =  Color.white;
     }
 
     //Painting Mesh Data
@@ -140,6 +181,7 @@ public class VertexPaintObjectEditor : Editor
         for (int i = 0; i < paintDatas.Count; i++)
         {
             VertexPaintData paintData = paintDatas[i];
+
             EditorUtility.ClearDirty(paintDatas[i].meshFilter);
         }
     }
@@ -166,7 +208,6 @@ public class VertexPaintObjectEditor : Editor
     }
 
     //Vertex Painting
-    bool isPaintingMode;
     VertexPaintBrush vertexBrush = new VertexPaintBrush(0, 1, 1, 1);
     readonly Vector3[] layerColors = new Vector3[]
     {
@@ -178,15 +219,17 @@ public class VertexPaintObjectEditor : Editor
 
     void DuringSceneGUI(SceneView sceneView)
     {
-        if (!isPaintingMode) return;
+        if (isPaintingMode)
+        {
+            HandleUtility.AddDefaultControl(GUIUtility.GetControlID(FocusType.Passive));
+            Tools.current = Tool.None;
 
-        HandleUtility.AddDefaultControl(GUIUtility.GetControlID(FocusType.Passive));
-        Tools.current = Tool.None;
+            SceneViewMeshRaycast();
+            PaintingObject();
 
-        SceneViewMeshRaycast();
-        PaintingObject();
-
-        DrawBrushHandle();
+            DrawBrushHandle();
+            DrawVertex();
+        }
 
         VertexColorDisplay();
     }
@@ -218,16 +261,6 @@ public class VertexPaintObjectEditor : Editor
             vertexBrush.point = Vector3.zero;
         }
     }
-    void DrawBrushHandle()
-    {
-        if (vertexBrush.point == Vector3.zero) return;
-
-        Handles.color = new Color(1, 0, 0, vertexBrush.intensity);
-        Handles.DrawWireDisc(vertexBrush.point, vertexBrush.normal, vertexBrush.size + vertexBrush.fade, 3);
-
-        Handles.color = new Color(0, 0, 1, vertexBrush.intensity);
-        Handles.DrawWireDisc(vertexBrush.point, vertexBrush.normal, vertexBrush.size, 3);
-    }
     void PaintingObject()
     {
         if (vertexBrush.point == Vector3.zero) return;
@@ -252,9 +285,13 @@ public class VertexPaintObjectEditor : Editor
             }
         }
 
+        PaintHotKey(e, type, shift, control, alt);
+    }
+    void PaintHotKey(Event e, EventType type, bool shift, bool control, bool alt)
+    {
         if (type == EventType.ScrollWheel)
         {
-            float delta = e.delta.y * -0.1f;
+            float delta = e.delta.y * -0.05f;
 
             if (control)
             {
@@ -270,7 +307,7 @@ public class VertexPaintObjectEditor : Editor
             }
             if (alt)
             {
-                vertexBrush.intensity = Mathf.Clamp01(vertexBrush.intensity + delta * 0.1f);
+                vertexBrush.intensity = Mathf.Clamp01(vertexBrush.intensity + delta);
                 e.Use();
                 Repaint();
             }
@@ -382,6 +419,35 @@ public class VertexPaintObjectEditor : Editor
     }
 
     bool overlayVertexColor;
+    Material vertexColorMaterial;
+    void DrawBrushHandle()
+    {
+        if (vertexBrush.point == Vector3.zero) return;
+
+        Handles.color = new Color(1, 0, 0, vertexBrush.intensity);
+        Handles.DrawWireDisc(vertexBrush.point, vertexBrush.normal, vertexBrush.size + vertexBrush.fade, 3);
+
+        Handles.color = new Color(0, 0, 1, vertexBrush.intensity);
+        Handles.DrawWireDisc(vertexBrush.point, vertexBrush.normal, vertexBrush.size, 3);
+    }
+    void DrawVertex()
+    {
+        for (int i = 0; i < paintDatas.Count; i++)
+        {
+            VertexPaintData paintData = paintDatas[i];
+
+            for (int vi = 0; vi < paintData.cacheVertices.Length; vi++)
+            {
+                Vector3 vertex = paintData.cacheVertices[vi];
+                Vector3 position = paintData.localToWorldMatrix.MultiplyPoint(vertex);
+                float distance = Vector3.Distance(position, vertexBrush.point);
+                bool inRange = distance < vertexBrush.size + vertexBrush.fade;
+
+                Handles.color = inRange ? Color.blue : Color.gray;
+                Handles.DrawWireCube(position, Vector3.one * 0.1f);
+            }
+        }
+    }
     void VertexColorDisplay()
     {
         if (!overlayVertexColor) return;

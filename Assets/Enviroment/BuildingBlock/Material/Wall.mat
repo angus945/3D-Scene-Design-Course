@@ -61,6 +61,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _LayerTextureSample_fa996e20627f414995e0db1e1ad6b022_AlbedoTexture1_3480292350:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LayerTextureSample_fa996e20627f414995e0db1e1ad6b022_MRAH_3316437271:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LayerTextureSample_fa996e20627f414995e0db1e1ad6b022_Normal_482171002:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MRAH_1:
         m_Texture: {fileID: 2800000, guid: 5b85cb96a213f644db6b13fbbc545d82, type: 3}
         m_Scale: {x: 1, y: 1}
