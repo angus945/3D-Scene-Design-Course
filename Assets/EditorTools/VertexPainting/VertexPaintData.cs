@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [System.Serializable]
 public class VertexPaintData
@@ -22,5 +23,10 @@ public class VertexPaintData
         instanceMesh.colors = vertexColors;
 
         meshFilter.mesh = instanceMesh;
+    }
+
+    public void ResetSharedMesh()
+    {
+        meshFilter.sharedMesh = sourceMesh;
     }
 }

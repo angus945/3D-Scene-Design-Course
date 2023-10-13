@@ -14,6 +14,8 @@ public class VertexPaintObjectEditor : Editor
     //Default
     void OnEnable()
     {
+        if (Application.isPlaying) return;
+
         paintObject = (VertexPaintObject)target;
 
         BuildPaintMesh();
@@ -25,7 +27,11 @@ public class VertexPaintObjectEditor : Editor
     }
     void OnDisable()
     {
+        if (Application.isPlaying) return;
+
         SceneView.duringSceneGui -= DuringSceneGUI;
+
+        LoadSouceMesh();
     }
 
     //InspectorGUI
@@ -56,6 +62,8 @@ public class VertexPaintObjectEditor : Editor
         {
             ClearColor();
         }
+
+        ClearMeshFilterDirty();
     }
     void DrawPaintingTool()
     {
@@ -65,7 +73,7 @@ public class VertexPaintObjectEditor : Editor
         vertexBrush.fade = EditorGUILayout.FloatField("brush fade", vertexBrush.fade);
         vertexBrush.intensity = EditorGUILayout.Slider("brush intensity", vertexBrush.intensity, 0, 1);
 
-        string[] toolbarLabels = { "Layer 0", "Layer 1", "Layer 2", "Layer 3" };
+        string[] toolbarLabels = { "Layer 0", "Layer 1", "Layer 2" };
         vertexBrush.paintLayer = GUILayout.Toolbar(vertexBrush.paintLayer, toolbarLabels);
     }
 
@@ -127,6 +135,14 @@ public class VertexPaintObjectEditor : Editor
             EditorUtility.ClearDirty(paintDatas[i].meshFilter);
         }
     }
+    void ClearMeshFilterDirty()
+    {
+        for (int i = 0; i < paintDatas.Count; i++)
+        {
+            VertexPaintData paintData = paintDatas[i];
+            EditorUtility.ClearDirty(paintDatas[i].meshFilter);
+        }
+    }
 
     void SaveSorceMesh()
     {
@@ -151,7 +167,7 @@ public class VertexPaintObjectEditor : Editor
 
     //Vertex Painting
     bool isPaintingMode;
-    VertexPaintBrush vertexBrush = new VertexPaintBrush(3, 1, 1, 1);
+    VertexPaintBrush vertexBrush = new VertexPaintBrush(0, 1, 1, 1);
     readonly Vector3[] layerColors = new Vector3[]
     {
         new Vector3(-1,-1,-1),
@@ -261,6 +277,69 @@ public class VertexPaintObjectEditor : Editor
         }
     }
     void PaintingMesh(VertexPaintData data, VertexPaintBrush brush)
+    {
+        for (int i = 0; i < data.cacheVertices.Length; i++)
+        {
+            float intensity, eraseIntensity;
+            if (BrushIntensity(data, brush, i, out intensity, out eraseIntensity)) continue;
+
+            Vector3 sourceColor, paintLayer, paintSource, paintCull;
+            ColorLayers(data, brush, i, out sourceColor, out paintLayer, out paintSource, out paintCull);
+
+            if (brush.paintLayer > 0)
+            {
+                Vector3 paintColor, baseColor;
+                if (!brush.erase)
+                {
+                    paintColor = Vector3.Max(paintSource, paintLayer * intensity);
+                    baseColor = paintCull;
+                }
+                else
+                {
+                    paintColor = Vector3.Min(paintSource, paintLayer * eraseIntensity);
+                    baseColor = paintCull;
+                }
+
+                Vector3 resultColor = baseColor + paintColor;
+                data.vertexColors[i] = new Color(resultColor.x, resultColor.y, resultColor.z);
+            }
+            else
+            {
+                Vector3 resultColor = Vector3.Min(sourceColor, Vector3.one * eraseIntensity);
+                data.vertexColors[i] = new Color(resultColor.x, resultColor.y, resultColor.z);
+            }
+
+        }
+
+        data.meshFilter.sharedMesh.colors = data.vertexColors;
+        EditorUtility.SetDirty(target);
+    }
+    bool BrushIntensity(VertexPaintData data, VertexPaintBrush brush, int index, out float intensity, out float eraseIntensity)
+    {
+        Vector3 vertex = data.cacheVertices[index];
+        Vector3 worldVertex = data.localToWorldMatrix.MultiplyPoint(vertex);
+        float distance = Vector3.Distance(worldVertex, brush.point);
+
+        distance = distance - brush.size;
+        distance = distance / brush.fade;
+        distance = Mathf.Clamp01(distance);
+
+        intensity = (1 - distance) * brush.intensity;
+        eraseIntensity = (distance) * brush.intensity;
+
+        return (distance > brush.size + brush.fade);
+    }
+    void ColorLayers(VertexPaintData data, VertexPaintBrush brush, int index, out Vector3 sourceColor, out Vector3 paintLayer, out Vector3 paintSource, out Vector3 paintCull)
+    {
+        paintLayer = layerColors[brush.paintLayer];
+        Vector3 cullLayer = Vector3.one - paintLayer;
+
+        sourceColor = new Vector3(data.vertexColors[index].r, data.vertexColors[index].g, data.vertexColors[index].b);
+
+        paintSource = new Vector3(sourceColor.x * paintLayer.x, sourceColor.y * paintLayer.y, sourceColor.z * paintLayer.z);
+        paintCull = new Vector3(sourceColor.x * cullLayer.x, sourceColor.y * cullLayer.y, sourceColor.z * cullLayer.z);
+    }
+    void PaintingMesh_Erase(VertexPaintData data, VertexPaintBrush brush)
     {
         for (int i = 0; i < data.cacheVertices.Length; i++)
         {

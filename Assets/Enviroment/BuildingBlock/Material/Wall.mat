@@ -22,19 +22,19 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AlbedoTexture1:
-        m_Texture: {fileID: 2800000, guid: 5875be59ea0bf50429b9acd2da2f079f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 51789a4da183f064c8f3bf279b81b897, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTexture2:
-        m_Texture: {fileID: 2800000, guid: 5db88638d2ad7824188db64e7a16b117, type: 3}
+        m_Texture: {fileID: 2800000, guid: 955d304975a6d4442bfa29d6e756a70f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTexture3:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: fc23fbf52732ee44c824f3b91c0b43c0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AlbedoTexture4:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 76b3a31c4f1613b45880b71f1e1cac0f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -61,8 +61,24 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MRAH_1:
+        m_Texture: {fileID: 2800000, guid: 5b85cb96a213f644db6b13fbbc545d82, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MRAH_2:
+        m_Texture: {fileID: 2800000, guid: 14ccb56cc19953b40bc6b72aa0ae3278, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MRAH_3:
+        m_Texture: {fileID: 2800000, guid: 7b06222440576804486044fdc0f4eedf, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MRAH_4:
+        m_Texture: {fileID: 2800000, guid: 8111883dde9ee124f90bc49794297341, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MRAH_Texture_1:
-        m_Texture: {fileID: 2800000, guid: 303266f56c90de949a6b1e866fd9f5d7, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5b85cb96a213f644db6b13fbbc545d82, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -73,6 +89,22 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Normal_1:
+        m_Texture: {fileID: 2800000, guid: 40431d8e6f0cdc546a2e0914bf146777, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_2:
+        m_Texture: {fileID: 2800000, guid: 94133afaef5be554580897273fdc06a3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_3:
+        m_Texture: {fileID: 2800000, guid: f83173bda9882aa429be6001dabc587c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_4:
+        m_Texture: {fileID: 2800000, guid: efd24c6dde3cede45b1320435bf9e51f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -81,7 +113,19 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_941d67a216834da7a9f850a83b30264f_Texture_1:
+        m_Texture: {fileID: 2800000, guid: c77a7a6a75fe01248805922b4be9da39, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_f7c16bf576b143c69c82d127c9cee5c1_Texture_1:
+        m_Texture: {fileID: 2800000, guid: c77a7a6a75fe01248805922b4be9da39, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D_Array:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -110,12 +154,12 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Fade: 0.017
+    - _Fade: 0.019
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _Noise: 0.12
+    - _Noise: 0.309
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
