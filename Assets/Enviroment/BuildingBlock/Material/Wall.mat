@@ -175,12 +175,12 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Fade: 0.026
+    - _Fade: 0.012
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _Noise: 0.111
+    - _Noise: 0.059
     - _OcclusionStrength: 1
     - _PARALLAX: 1
     - _Parallax: 0.005

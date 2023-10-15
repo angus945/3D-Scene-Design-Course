@@ -46,6 +46,17 @@ public class VertexPaintObjectEditor : Editor
         //DrawMaterialProperity();
         DrawBrushProperity();
 
+        for (int i = 0; i < paintDatas.Count; i++)
+        {
+
+        }
+
+
+
+
+
+
+
         DrawDebugOption();
     }
 
@@ -179,6 +190,8 @@ public class VertexPaintObjectEditor : Editor
     }
     void ClearMeshFilterDirty()
     {
+        if (paintDatas == null) return;
+
         for (int i = 0; i < paintDatas.Count; i++)
         {
             VertexPaintData paintData = paintDatas[i];
