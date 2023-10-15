@@ -33,6 +33,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _AlbedoTexture3_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: d093950c02f186948ac03902d5fa0b8a, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -69,6 +73,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MRAH_4:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: d093950c02f186948ac03902d5fa0b8a, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -86,6 +94,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal_3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal_4:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -137,7 +149,9 @@ Material:
     - _Metallic: 0
     - _Noise: 0
     - _OcclusionStrength: 1
+    - _PARALLAX: 0
     - _Parallax: 0.005
+    - _ParallaxIntensity: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1

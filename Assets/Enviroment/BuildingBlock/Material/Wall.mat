@@ -10,7 +10,8 @@ Material:
   m_Name: Wall
   m_Shader: {fileID: -6465566751694194690, guid: 083d37bf70610e043a0935fbe736a55f,
     type: 3}
-  m_ValidKeywords: []
+  m_ValidKeywords:
+  - _PARALLAX
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -181,7 +182,9 @@ Material:
     - _Metallic: 0
     - _Noise: 0.111
     - _OcclusionStrength: 1
+    - _PARALLAX: 1
     - _Parallax: 0.005
+    - _ParallaxIntensity: 0.0624
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
