@@ -31,6 +31,7 @@ public class VertexPaintObjectEditor : Editor
         if (Application.isPlaying) return;
 
         SceneView.duringSceneGui -= DuringSceneGUI;
+        isPaintingMode = false;
 
         //LoadSouceMesh();
     }
@@ -84,8 +85,8 @@ public class VertexPaintObjectEditor : Editor
         }
         GUI.color = Color.white;
 
-        string[] toolbarLabels = { "Layer 0", "Layer 1", "Layer 2" };
-        Vector3[] channels = { Vector3.one, new Vector3(1, 0, 0), new Vector3(0, 1, 0) };
+        string[] toolbarLabels = { "Layer 0", "Layer 1", "Layer 2", "Layer 3" };
+        Vector3[] channels = { Vector3.one, new Vector3(1, 0, 0), new Vector3(0, 1, 0), new Vector3(0, 0, 1) };
         vertexBrush.paintLayer = GUILayout.Toolbar(vertexBrush.paintLayer, toolbarLabels);
         vertexColorMaterial.SetVector("_Display", channels[vertexBrush.paintLayer]);
 
