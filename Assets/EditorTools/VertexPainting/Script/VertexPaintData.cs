@@ -4,16 +4,15 @@ using UnityEngine;
 [System.Serializable]
 public class VertexPaintData
 {
-    public MeshFilter meshFilter;
-    public Matrix4x4 localToWorldMatrix { get => meshFilter.transform.localToWorldMatrix; }
-    public Vector3[] cacheVertices;
-
     public Mesh sourceMesh;
+    public MeshFilter meshFilter;
     public Color[] vertexColors;
+    public int vertexCount { get => sourceMesh.vertexCount; }
 
-    public VertexPaintData(MeshFilter filter)
+    public VertexPaintData(MeshFilter filter, Mesh source)
     {
         this.meshFilter = filter;
+        this.sourceMesh = source;
         vertexColors = new Color[filter.sharedMesh.vertexCount];
     }
 
