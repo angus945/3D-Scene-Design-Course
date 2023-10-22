@@ -15,6 +15,7 @@ Material:
   - _ADDITIONAL_LIGHT_SHADOWS
   - _MAIN_LIGHT_SHADOWS
   - _SHADOWS_SOFT
+  - _TERRAINBLEND
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -56,6 +57,7 @@ Material:
     - _SHADOWS_SOFT: 1
     - _SSS_Power: 10
     - _SSS_Size: 1
+    - _TERRAINBLEND: 1
     - _TerrainBlend_FadeDistance: 100
     - _TerrainBlend_NoiseSize: 100
     - _TerrainBlend_NoiseStrength: 1

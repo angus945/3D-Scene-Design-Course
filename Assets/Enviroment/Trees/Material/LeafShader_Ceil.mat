@@ -18,7 +18,7 @@ Material:
   - _SHADOWS_SOFT
   m_InvalidKeywords: []
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -60,8 +60,8 @@ Material:
     - _SSS_Power: 10
     - _SSS_Size: 0.124
     - _SubsurfaceSize: 0.207
-    - _Wind_Speed: 0.598
-    - _Wind_Strength: 0.058
+    - _Wind_Speed: 1.11
+    - _Wind_Strength: 0.23
     m_Colors:
     - _SSSColor: {r: 0, g: 0.92473125, b: 1, a: 0}
     - _SSS_Color: {r: 0.16509423, g: 1, b: 0.9152775, a: 0}
