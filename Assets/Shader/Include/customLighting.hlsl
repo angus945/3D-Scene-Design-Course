@@ -20,12 +20,18 @@ struct CustomLightingData
 float3 CustomLightHandling(CustomLightingData d, Light light)
 {
     //add shadow
-    float3 radiance = light.color * (light.distanceAttenuation * light.shadowAttenuation) + half3(unity_SHAr.w, unity_SHAg.w, unity_SHAb.w);;
+    // float3 radiance = light.color * (light.distanceAttenuation * light.shadowAttenuation) + half3(unity_SHAr.w, unity_SHAg.w, unity_SHAb.w);
+    float3 radiance = light.color * (light.distanceAttenuation * light.shadowAttenuation);
+    float globalIllumination = half3(unity_SHAr.w, unity_SHAg.w, unity_SHAb.w);
     
     float diffuse = saturate((dot(d.normalWS, light.direction) + 1) * 0.5);    
-    float3 color = d.albedo * radiance * diffuse;
+    // float diffuse = dot(d.normalWS, light.direction);
+    float intensity = radiance * diffuse + globalIllumination;
+    float3 color = d.albedo * intensity;
 
     return color;
+    // return intensity;
+    // return diffuse;
 }
 #endif
 
