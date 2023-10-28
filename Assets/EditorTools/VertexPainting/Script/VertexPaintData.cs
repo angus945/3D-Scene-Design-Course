@@ -20,7 +20,7 @@ public class VertexPaintData
     {
         Mesh instanceMesh = Mesh.Instantiate(sourceMesh) as Mesh;
         instanceMesh.colors = vertexColors;
-        Debug.Log(instanceMesh.colors.Length);
+        //Debug.Log(instanceMesh.colors.Length);
 
         meshFilter.mesh = instanceMesh;
     }

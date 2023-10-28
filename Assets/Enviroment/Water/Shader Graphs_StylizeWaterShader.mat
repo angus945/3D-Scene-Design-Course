@@ -68,7 +68,7 @@ Material:
     - _SHADOWS_SOFT: 1
     - _WaterDepth: 5.7
     m_Colors:
-    - _Deepwater: {r: 0.19624403, g: 0.32999954, b: 0.62352943, a: 0.4392157}
-    - _FormColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShallowWater: {r: 0, g: 0.7686275, b: 1, a: 0.49803922}
+    - _Deepwater: {r: 0.30860624, g: 0.42716104, b: 0.6886792, a: 0.4392157}
+    - _FormColor: {r: 1, g: 1, b: 1, a: 0.50980395}
+    - _ShallowWater: {r: 0.33521715, g: 0.62318677, b: 0.764151, a: 0.49803922}
   m_BuildTextureStacks: []

@@ -56,16 +56,18 @@ Material:
     - _SHADOWS_SOFT: 1
     - _SSS_Power: 10
     - _SSS_Size: 1
+    - _TERRAINBLEND: 0
     - _TerrainBlend_FadeDistance: 0
     - _TerrainBlend_NoiseSize: 0
     - _TerrainBlend_NoiseStrength: 0
-    - _Wind_Speed: 0.895
-    - _Wind_Strength: 0.157
+    - _Wind_Speed: 4.33
+    - _Wind_Strength: 2.15
     m_Colors:
     - _SSS_Color: {r: 0.16509426, g: 1, b: 0.9152775, a: 0}
     - _Tint: {r: 0.47641504, g: 1, b: 0.527357, a: 0}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Wind_Direction: {r: 1, g: 0, b: 0, a: 0}
+    - _Wind_Color: {r: 0, g: 0, b: 0, a: 0}
+    - _Wind_Direction: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4863320858338930123
 MonoBehaviour:
