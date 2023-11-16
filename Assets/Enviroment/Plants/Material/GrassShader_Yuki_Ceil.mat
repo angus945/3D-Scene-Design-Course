@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GrassShader_Ceil
+  m_Name: GrassShader_Yuki_Ceil
   m_Shader: {fileID: -6465566751694194690, guid: 2d1089dbe8861264294bf8bf69a5809f,
     type: 3}
   m_ValidKeywords:
@@ -27,7 +27,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseColor:
-        m_Texture: {fileID: 2800000, guid: 7cc25bcfcc8e6f34ea24cf8d3685ebde, type: 3}
+        m_Texture: {fileID: 2800000, guid: c1cc081d513bfc241939902b428ca088, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -67,7 +67,7 @@ Material:
     - _SSS_Color: {r: 0.16509426, g: 1, b: 0.9152775, a: 0}
     - _Tint: {r: 0.47641504, g: 1, b: 0.527357, a: 0}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Wind_Color: {r: 1.2312559, g: 1.1422354, b: 1.1209075, a: 0.6039216}
+    - _Wind_Color: {r: 1.2312559, g: 1.1422354, b: 1.1209075, a: 1}
     - _Wind_Direction: {r: 1, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &4863320858338930123

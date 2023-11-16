@@ -2672,15 +2672,18 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -1236.0,
-            "y": 1326.0,
-            "width": 211.0,
+            "x": -1174.0,
+            "y": 1414.9998779296875,
+            "width": 211.00006103515626,
             "height": 278.0
         }
     },
     "m_Slots": [
         {
             "m_Id": "ad339a51cace42e3a1bd62679a19f3eb"
+        },
+        {
+            "m_Id": "b0a720f303bf4a5cb1452072b6998ad7"
         },
         {
             "m_Id": "d555c198d7074d329ebd37c9e4ec0b0d"
@@ -2695,10 +2698,14 @@
     },
     "m_SerializedSubGraph": "{\n    \"subGraph\": {\n        \"fileID\": -5475051401550479605,\n        \"guid\": \"ef26881db2cbff54bacf250a7e965071\",\n        \"type\": 3\n    }\n}",
     "m_PropertyGuids": [
-        "5a0328e7-ee78-4fa8-b1a2-b3d23d0cc976"
+        "5a0328e7-ee78-4fa8-b1a2-b3d23d0cc976",
+        "f9383d76-57e7-42fa-a885-35b8874e3606",
+        "ac3761af-11bb-4aae-9de5-a1c374f7c790"
     ],
     "m_PropertyIds": [
-        -1311676397
+        -1311676397,
+        96575934,
+        -1241554179
     ],
     "m_Dropdowns": [],
     "m_DropdownSelectedEntries": []
@@ -2757,10 +2764,10 @@
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "ad339a51cace42e3a1bd62679a19f3eb",
     "m_Id": -1311676397,
-    "m_DisplayName": "Vector3",
+    "m_DisplayName": "Albedo",
     "m_SlotType": 0,
     "m_Hidden": false,
-    "m_ShaderOutputName": "_Vector3",
+    "m_ShaderOutputName": "_Albedo",
     "m_StageCapability": 3,
     "m_Value": {
         "x": 0.0,
@@ -2797,6 +2804,20 @@
     "m_Entries": [],
     "m_Value": 1,
     "m_IsEditable": true
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BooleanMaterialSlot",
+    "m_ObjectId": "b0a720f303bf4a5cb1452072b6998ad7",
+    "m_Id": -1241554179,
+    "m_DisplayName": "lighting",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "_lighting",
+    "m_StageCapability": 3,
+    "m_Value": false,
+    "m_DefaultValue": false
 }
 
 {

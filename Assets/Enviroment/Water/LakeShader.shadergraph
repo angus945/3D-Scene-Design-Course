@@ -1208,6 +1208,9 @@
             "m_Id": "c70a601ef09f423ba5d43f658b443bb5"
         },
         {
+            "m_Id": "9f7ba877d556418d978129f3a3d51001"
+        },
+        {
             "m_Id": "90c51d64837744b9a3f220bab2547ce0"
         }
     ],
@@ -3410,6 +3413,20 @@
     },
     "m_Labels": [],
     "m_Space": 0
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BooleanMaterialSlot",
+    "m_ObjectId": "9f7ba877d556418d978129f3a3d51001",
+    "m_Id": 6,
+    "m_DisplayName": "lighting",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "lighting",
+    "m_StageCapability": 3,
+    "m_Value": true,
+    "m_DefaultValue": false
 }
 
 {

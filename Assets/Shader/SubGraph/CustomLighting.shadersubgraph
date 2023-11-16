@@ -5,11 +5,18 @@
     "m_Properties": [
         {
             "m_Id": "d6fbed2abced48dea698437e270fe816"
+        },
+        {
+            "m_Id": "27d6845eabe547d4b9b2e4a175e92ff9"
         }
     ],
     "m_Keywords": [],
     "m_Dropdowns": [],
-    "m_CategoryData": [],
+    "m_CategoryData": [
+        {
+            "m_Id": "ff4ca0a85e024e02ad193ebbbbf38eea"
+        }
+    ],
     "m_Nodes": [
         {
             "m_Id": "19bc2ad82e914bccbf066489201cd600"
@@ -31,6 +38,9 @@
         },
         {
             "m_Id": "9ab33cdec4cc4d21ac6c2c1881593c7e"
+        },
+        {
+            "m_Id": "5bc20c609cf3436383d4b981490ae55a"
         }
     ],
     "m_GroupDatas": [],
@@ -48,6 +58,20 @@
                     "m_Id": "19bc2ad82e914bccbf066489201cd600"
                 },
                 "m_SlotId": 1
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
+                    "m_Id": "5bc20c609cf3436383d4b981490ae55a"
+                },
+                "m_SlotId": 0
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "3c7516b457ac400fb1d6817b26ab3f15"
+                },
+                "m_SlotId": 6
             }
         },
         {
@@ -279,6 +303,28 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.Internal.BooleanShaderProperty",
+    "m_ObjectId": "27d6845eabe547d4b9b2e4a175e92ff9",
+    "m_Guid": {
+        "m_GuidSerialized": "ac3761af-11bb-4aae-9de5-a1c374f7c790"
+    },
+    "m_Name": "lighting",
+    "m_DefaultRefNameVersion": 1,
+    "m_RefNameGeneratedByDisplayName": "lighting",
+    "m_DefaultReferenceName": "_lighting",
+    "m_OverrideReferenceName": "",
+    "m_GeneratePropertyBlock": true,
+    "m_UseCustomSlotLabel": false,
+    "m_CustomSlotLabel": "",
+    "m_Precision": 0,
+    "overrideHLSLDeclaration": false,
+    "hlslDeclarationOverride": 0,
+    "m_Hidden": false,
+    "m_Value": false
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "2807bafe7168438b855542e0e176757c",
     "m_Id": 1,
@@ -336,10 +382,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 182.2498779296875,
-            "y": -358.5,
-            "width": 297.00006103515627,
-            "height": 350.0
+            "x": 123.99993896484375,
+            "y": -0.000021457672119140625,
+            "width": 297.0,
+            "height": 349.9999694824219
         }
     },
     "m_Slots": [
@@ -354,6 +400,9 @@
         },
         {
             "m_Id": "894d010bd0b546a5b9fad11d49354444"
+        },
+        {
+            "m_Id": "af7e4d92cd7d4fc495357fde66a167a0"
         },
         {
             "m_Id": "2807bafe7168438b855542e0e176757c"
@@ -400,6 +449,41 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.PropertyNode",
+    "m_ObjectId": "5bc20c609cf3436383d4b981490ae55a",
+    "m_Group": {
+        "m_Id": ""
+    },
+    "m_Name": "Property",
+    "m_DrawState": {
+        "m_Expanded": true,
+        "m_Position": {
+            "serializedVersion": "2",
+            "x": -164.0000457763672,
+            "y": 318.0,
+            "width": 116.00001525878906,
+            "height": 34.000030517578128
+        }
+    },
+    "m_Slots": [
+        {
+            "m_Id": "8491aa753cd74047b4aa50c1c3119f57"
+        }
+    ],
+    "synonyms": [],
+    "m_Precision": 0,
+    "m_PreviewExpanded": true,
+    "m_PreviewMode": 0,
+    "m_CustomColors": {
+        "m_SerializableColors": []
+    },
+    "m_Property": {
+        "m_Id": "27d6845eabe547d4b9b2e4a175e92ff9"
+    }
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "72b7b54a9db54b508a282c887a2e8642",
     "m_Id": 2,
@@ -419,6 +503,20 @@
         "z": 0.0
     },
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BooleanMaterialSlot",
+    "m_ObjectId": "8491aa753cd74047b4aa50c1c3119f57",
+    "m_Id": 0,
+    "m_DisplayName": "lighting",
+    "m_SlotType": 1,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "Out",
+    "m_StageCapability": 3,
+    "m_Value": false,
+    "m_DefaultValue": false
 }
 
 {
@@ -456,10 +554,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": 32.2498779296875,
-            "y": -93.5,
-            "width": 0.0,
-            "height": 0.0
+            "x": -162.00003051757813,
+            "y": 266.0,
+            "width": 119.00004577636719,
+            "height": 33.999969482421878
         }
     },
     "m_Slots": [
@@ -539,10 +637,24 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.BooleanMaterialSlot",
+    "m_ObjectId": "af7e4d92cd7d4fc495357fde66a167a0",
+    "m_Id": 6,
+    "m_DisplayName": "lighting",
+    "m_SlotType": 0,
+    "m_Hidden": false,
+    "m_ShaderOutputName": "lighting",
+    "m_StageCapability": 3,
+    "m_Value": false,
+    "m_DefaultValue": false
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "c05c5a484ea942ad9d4e4ca39703e5bc",
     "m_Id": 0,
-    "m_DisplayName": "Vector3",
+    "m_DisplayName": "Albedo",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -638,10 +750,10 @@
     "m_Guid": {
         "m_GuidSerialized": "5a0328e7-ee78-4fa8-b1a2-b3d23d0cc976"
     },
-    "m_Name": "Vector3",
+    "m_Name": "Albedo",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Vector3",
-    "m_DefaultReferenceName": "_Vector3",
+    "m_RefNameGeneratedByDisplayName": "Albedo",
+    "m_DefaultReferenceName": "_Albedo",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -714,5 +826,20 @@
         "z": 0.0
     },
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "ff4ca0a85e024e02ad193ebbbbf38eea",
+    "m_Name": "",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "d6fbed2abced48dea698437e270fe816"
+        },
+        {
+            "m_Id": "27d6845eabe547d4b9b2e4a175e92ff9"
+        }
+    ]
 }
 

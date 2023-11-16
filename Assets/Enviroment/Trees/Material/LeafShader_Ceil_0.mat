@@ -7,15 +7,15 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GrassShader_Ceil
-  m_Shader: {fileID: -6465566751694194690, guid: 2d1089dbe8861264294bf8bf69a5809f,
+  m_Name: LeafShader_Ceil_0
+  m_Shader: {fileID: -6465566751694194690, guid: b1e4c4b7ea265894eb7e3be74f6a435d,
     type: 3}
   m_ValidKeywords:
   - _ADDITIONAL_LIGHTS
   - _ADDITIONAL_LIGHT_SHADOWS
   - _MAIN_LIGHT_SHADOWS
+  - _MAIN_LIGHT_SHADOWS_CASCADE
   - _SHADOWS_SOFT
-  - _TERRAINBLEND
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -27,11 +27,11 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseColor:
-        m_Texture: {fileID: 2800000, guid: 7cc25bcfcc8e6f34ea24cf8d3685ebde, type: 3}
+        m_Texture: {fileID: 2800000, guid: 61a9465354b8cd349ba5f6bcc5fafa5d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
-        m_Texture: {fileID: 2800000, guid: 7cc25bcfcc8e6f34ea24cf8d3685ebde, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6068a9de4b7223f4eb5c9d1a049bc47d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -51,26 +51,27 @@ Material:
     - _ADDITIONAL_LIGHTS: 1
     - _ADDITIONAL_LIGHT_SHADOWS: 1
     - _MAIN_LIGHT_SHADOWS: 1
-    - _MAIN_LIGHT_SHADOWS_CASCADE: 0
+    - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _SHADOWS_SOFT: 1
+    - _SSSPower: 10
+    - _SSSSize: 0.141
     - _SSS_Power: 10
-    - _SSS_Size: 1
-    - _TERRAINBLEND: 1
-    - _TerrainBlend_FadeDistance: 100
-    - _TerrainBlend_NoiseSize: 100
-    - _TerrainBlend_NoiseStrength: 1
-    - _Wind_Speed: 4.33
-    - _Wind_Strength: 3.27
+    - _SSS_Size: 0.124
+    - _SubsurfaceSize: 0.207
+    - _Wind_Speed: 2
+    - _Wind_Strength: 1
     m_Colors:
-    - _SSS_Color: {r: 0.16509426, g: 1, b: 0.9152775, a: 0}
-    - _Tint: {r: 0.47641504, g: 1, b: 0.527357, a: 0}
+    - _SSSColor: {r: 0, g: 0.92473125, b: 1, a: 0}
+    - _SSS_Color: {r: 0, g: 1, b: 0.8967135, a: 0}
+    - _Subsurface: {r: 0.16509426, g: 1, b: 0.9152775, a: 0}
+    - _SubsurfaceColor: {r: 0.16470587, g: 0.88467765, b: 1, a: 1}
+    - _Tint: {r: 0.6981132, g: 0.6050761, b: 0.35893556, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Wind_Color: {r: 1.2312559, g: 1.1422354, b: 1.1209075, a: 0.6039216}
-    - _Wind_Direction: {r: 1, g: 1, b: 0, a: 0}
+    - _Wind_Direction: {r: 1, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &4863320858338930123
+--- !u!114 &6356012741664634678
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}

@@ -9,6 +9,7 @@ struct CustomLightingData
     float4 shadowCoord;
     
     float3 albedo;
+    bool lighting;
 
     float fogFactor;
 };
@@ -19,20 +20,28 @@ struct CustomLightingData
 #ifndef SHADERGRAPH_PREVIEW 
 float3 CustomLightHandling(CustomLightingData d, Light light)
 {
-    //add shadow
-    // float3 radiance = light.color * (light.distanceAttenuation * light.shadowAttenuation) + half3(unity_SHAr.w, unity_SHAg.w, unity_SHAb.w);
-    float3 radiance = light.color * (light.distanceAttenuation * light.shadowAttenuation);
     float globalIllumination = half3(unity_SHAr.w, unity_SHAg.w, unity_SHAb.w);
-    
-    float diffuse = saturate((dot(d.normalWS, light.direction) + 1) * 0.5);    
-    // float diffuse = dot(d.normalWS, light.direction);
-    float intensity = radiance * diffuse + globalIllumination;
-    float3 color = d.albedo * intensity;
 
-    return color;
+    if(d.lighting)
+    {
+        float3 radiance = light.color * (light.distanceAttenuation * light.shadowAttenuation);
+        
+        float diffuse = saturate((dot(d.normalWS, light.direction) + 1) * 0.5);    
+        // float diffuse = dot(d.normalWS, light.direction);
+        float intensity = radiance * diffuse + globalIllumination;
+        float3 color = d.albedo * intensity;
+
+        return color;
+    }
+    else    
+    {
+        return d.albedo * max(light.shadowAttenuation, globalIllumination);
+    }
+
     // return intensity;
     // return diffuse;
 }
+
 #endif
 
 float3 CalculateCustomLighting(CustomLightingData d)
@@ -67,13 +76,14 @@ float3 CalculateCustomLighting(CustomLightingData d)
     
 }
 
-void CalculateCustomLighting_float(float3 position, float3 normal, float3 viewDirection, float3 albedo, out float3 color)
+void CalculateCustomLighting_float(float3 position, float3 normal, float3 viewDirection, float3 albedo, bool lighting, out float3 color)
 {
     CustomLightingData d;
     d.positionWS = position;
     d.normalWS = normal;
     d.albedo = albedo;
     d.viewDirectionWS = viewDirection;
+    d.lighting = lighting;
 
     #ifdef SHADERGRAPH_PREVIEW
         d.shadowCoord = 0;
