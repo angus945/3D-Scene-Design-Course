@@ -422,7 +422,7 @@ public class VertexPaintObjectEditor : Editor
 
         painter.InspectorGUI_EnablePainting();
 
-        if(painter.isPainting)
+        if (painter.isPainting)
         {
             brush.InspectirGUI_DrawBrushProperity(layers.Materials.ToArray());
         }
@@ -438,7 +438,7 @@ public class VertexPaintObjectEditor : Editor
         {
             ResetToSourceMesh();
 
-            paintDatas.Clear();
+            if (paintDatas != null) paintDatas.Clear();
             LoadMeshFilters(paintObject.transform);
         }
         if (GUILayout.Button("Build Paint Mesh"))

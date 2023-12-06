@@ -6,7 +6,7 @@ using UnityEngine;
 [ExecuteInEditMode]
 public class VertexPaintObject : MonoBehaviour
 {
-    public List<VertexPaintData> paintMeshes;
+    public List<VertexPaintData> paintMeshes = new List<VertexPaintData>();
 
     void Awake()
     {
