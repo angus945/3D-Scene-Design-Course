@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 public class CacheData
@@ -374,7 +375,7 @@ public class VertexPaintObjectEditor : Editor
 
     PaintingLayers layers = new PaintingLayers();
     VertexPainter painter = new VertexPainter();
-    VertexPainterBrush brush = new VertexPainterBrush(0.1f, 0.9f, 1, 1);
+    VertexPainterBrush brush = new VertexPainterBrush(0.1f, 0.9f, 1, 0);
     VertexColorDebug debug = new VertexColorDebug();
 
     //Default
@@ -530,6 +531,7 @@ public class VertexPaintObjectEditor : Editor
         if (painter.SceneGUI_Paint(paintDatas, layer, brush))
         {
             EditorUtility.SetDirty(target);
+            EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
             for (int i = 0; i < paintDatas.Count; i++)
             {
                 EditorUtility.ClearDirty(paintDatas[i].meshFilter);
