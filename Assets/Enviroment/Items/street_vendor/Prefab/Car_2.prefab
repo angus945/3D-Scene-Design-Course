@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &8112283359483299
 Transform:
@@ -46,6 +46,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: box003 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733218923177457901, guid: 7cdbcfc0f7f8a904a9814ab6b37cc019,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5396461501795426903, guid: 7cdbcfc0f7f8a904a9814ab6b37cc019,
         type: 3}
@@ -192,6 +197,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: car
       objectReference: {fileID: 0}
+    - target: {fileID: 9190542588964036273, guid: 7a8592fee75ea0e449d211022bdcd47a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a8592fee75ea0e449d211022bdcd47a, type: 3}
 --- !u!4 &1067037615724528865 stripped
@@ -211,6 +221,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 002 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091324187415427311, guid: 4e7cf900bb8b9374685428378e6848d9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6900477525769871957, guid: 4e7cf900bb8b9374685428378e6848d9,
         type: 3}
@@ -286,6 +301,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: box003 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733218923177457901, guid: 7cdbcfc0f7f8a904a9814ab6b37cc019,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5396461501795426903, guid: 7cdbcfc0f7f8a904a9814ab6b37cc019,
         type: 3}

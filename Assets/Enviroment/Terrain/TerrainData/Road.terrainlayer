@@ -9,7 +9,7 @@ TerrainLayer:
   m_Name: Road
   m_DiffuseTexture: {fileID: 2800000, guid: 682853784d3ccaa4dbc027324102b2c1, type: 3}
   m_NormalMapTexture: {fileID: 2800000, guid: af72b9fd6bf3deb4cbfe1bc5f1016977, type: 3}
-  m_MaskMapTexture: {fileID: 0}
+  m_MaskMapTexture: {fileID: 2800000, guid: fd3ad232fe0d21d4fa66741c196e51a4, type: 3}
   m_TileSize: {x: 10, y: 10}
   m_TileOffset: {x: 0, y: 0}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}

@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &912638337593956044
 Transform:
@@ -103,6 +103,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: box002 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 676954081754631768, guid: d92a6c207b70bfe42b586770ef4e9dce,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d92a6c207b70bfe42b586770ef4e9dce, type: 3}
 --- !u!4 &704092417075852522 stripped
@@ -122,6 +127,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 002 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091324187415427311, guid: 4e7cf900bb8b9374685428378e6848d9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6900477525769871957, guid: 4e7cf900bb8b9374685428378e6848d9,
         type: 3}
@@ -197,6 +207,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111401727189940113, guid: 3fe7a2a9de621eb45ab5e1d8a406819f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6889346145318677803, guid: 3fe7a2a9de621eb45ab5e1d8a406819f,
         type: 3}
@@ -328,6 +343,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: box001
       objectReference: {fileID: 0}
+    - target: {fileID: 7559982346771496701, guid: 47b7f5e90e04da342a08c0b17f1dc7bb,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47b7f5e90e04da342a08c0b17f1dc7bb, type: 3}
 --- !u!4 &7514825076612510930 stripped
@@ -347,6 +367,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 003 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6111401727189940113, guid: 3fe7a2a9de621eb45ab5e1d8a406819f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6889346145318677803, guid: 3fe7a2a9de621eb45ab5e1d8a406819f,
         type: 3}

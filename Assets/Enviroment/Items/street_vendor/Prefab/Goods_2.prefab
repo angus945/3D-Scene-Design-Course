@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6701700250614644392
 Transform:
@@ -48,6 +48,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: winebarrel_N
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505817382006495732, guid: fa9c0ad5052df7c428752674b6680c1b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2282881095566050126, guid: fa9c0ad5052df7c428752674b6680c1b,
         type: 3}
@@ -124,6 +129,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: box003 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4733218923177457901, guid: 7cdbcfc0f7f8a904a9814ab6b37cc019,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5396461501795426903, guid: 7cdbcfc0f7f8a904a9814ab6b37cc019,
         type: 3}
       propertyPath: m_RootOrder
@@ -198,6 +208,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 002 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6091324187415427311, guid: 4e7cf900bb8b9374685428378e6848d9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6900477525769871957, guid: 4e7cf900bb8b9374685428378e6848d9,
         type: 3}
@@ -274,6 +289,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: winebarrel_N (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1505817382006495732, guid: fa9c0ad5052df7c428752674b6680c1b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2282881095566050126, guid: fa9c0ad5052df7c428752674b6680c1b,
         type: 3}
       propertyPath: m_RootOrder
@@ -349,6 +369,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 002 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6091324187415427311, guid: 4e7cf900bb8b9374685428378e6848d9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6900477525769871957, guid: 4e7cf900bb8b9374685428378e6848d9,
         type: 3}
       propertyPath: m_RootOrder
@@ -423,6 +448,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: winebarrel_N (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1505817382006495732, guid: fa9c0ad5052df7c428752674b6680c1b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 2282881095566050126, guid: fa9c0ad5052df7c428752674b6680c1b,
         type: 3}
