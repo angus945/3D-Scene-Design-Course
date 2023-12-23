@@ -32,6 +32,13 @@ public class SC_FPSController : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Time.timeScale = (Time.timeScale == 0) ? 1 : 0;
+        }
+
+        if (Time.timeScale == 0) return;
+
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
